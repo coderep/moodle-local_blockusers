@@ -29,4 +29,6 @@
  */ 
 	$plugin->version  = 2013042307;
 	$plugin->requires = 2012062502.00;
+	$plugin->release  = '1.1.0';
+	$plugin->maturity = MATURITY_STABLE;
 ?>
