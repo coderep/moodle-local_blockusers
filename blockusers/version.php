@@ -27,7 +27,7 @@
  * @copyright 2013 Gayatri Venugopal
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */ 
-	$plugin->version  = 2013042307;
+	$plugin->version  = 2013042308;
 	$plugin->requires = 2012062502.00;
 	$plugin->release  = '1.1.0';
 	$plugin->maturity = MATURITY_STABLE;
