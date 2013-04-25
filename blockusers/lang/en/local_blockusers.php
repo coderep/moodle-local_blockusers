@@ -32,4 +32,5 @@ $string['sno'] = 'Serial No.';
 $string['usersblocked'] = 'Users to be blocked';
 $string['blockfrom'] = 'Block from';
 $string['blocktill'] = 'Block till';
+$string['pluginname'] = 'Block Users';
 ?>
