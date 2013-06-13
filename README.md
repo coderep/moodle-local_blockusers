@@ -10,8 +10,8 @@ Rename the new folder to blockusers.
 
 You are required to add the following lines to moodle/login/index.php, for the plugin blocking mechanism to work:
 
-$username = $frm->username;\n
-	global $DB;\n
+$username = $frm->username;<br>
+	global $DB;<br>
 	$dbman = $DB->get_manager();
 	$timezone = "Asia/Calcutta";
 	if(function_exists('date_default_timezone_set')) date_default_timezone_set($timezone);
