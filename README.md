@@ -13,7 +13,7 @@ You are required to add the following lines to moodle/login/index.php, for the p
 $username = $frm->username;<br>
 	global $DB;<br>
 	$dbman = $DB->get_manager();<br>
-	$timezone = "Asia/Calcutta";<br>
+	$timezone = "Asia/Calcutta"; //set your timezone here<br>
 	if(function_exists('date_default_timezone_set')) date_default_timezone_set($timezone);<br>
 	if($dbman->table_exists("blockusers"))<br>
 	{<br>
