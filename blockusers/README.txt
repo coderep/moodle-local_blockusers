@@ -16,15 +16,21 @@ Download zip from: https://github.com/innovg/moodle-local_blockusers/tree/master
 Unzip into the 'local' subfolder of your Moodle install.
 Rename the new folder to blockusers.
 Add the following lines in moodle/login/index.php starting from line 117:
-	$username = $frm->username;
-	global $DB;
-	$curTime = time();
-	$queryString = "SELECT * FROM mdl_blockusers WHERE start_timestamp <= ".$curTime." && ".$curTime." <= stop_timestamp && username like '".$username."'";
-	if($DB->record_exists_sql($queryString))
-	{
-		$errormsg = "You are not permitted to login";
-		$errorcode = 3;
-	}
+	$username = $frm->username;<br>
+	global $DB;<br>
+	$dbman = $DB->get_manager();<br>
+	$timezone = "Asia/Calcutta"; //set your timezone here<br>
+	if(function_exists('date_default_timezone_set')) date_default_timezone_set($timezone);<br>
+	if($dbman->table_exists("blockusers"))<br>
+	{<br>
+		$curTime = time();<br>
+		$queryString = "SELECT * FROM mdl_blockusers WHERE start_timestamp <= ".$curTime." && ".$curTime." <= stop_timestamp && username like '".$username."'";<br>
+		if($DB->record_exists_sql($queryString))<br>
+		{<br>
+			$errormsg = "You are not permitted to login";<br>
+			$errorcode = 3;<br>
+		}<br>
+	}<br>
 	
 Visit http://yoursite.com/admin to finish the installation. 
 
