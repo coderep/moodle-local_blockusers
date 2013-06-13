@@ -25,17 +25,6 @@ $username = $frm->username;<br>
 			$errorcode = 3;<br>
 		}<br>
 	}<br>
-	if($dbman->table_exists("blockdefaulters"))<br>
-	{<br>
-		$curTime = time();<br>
-		$queryString = "SELECT * FROM mdl_blockdefaulters WHERE start_timestamp <= ".$curTime." && ".$curTime." <= stop_timestamp && username like '".$username."'";<br>
-		error_log($queryString);<br>
-		if($DB->record_exists_sql($queryString))<br>
-		{<br>
-			$errormsg = "You are not permitted to login";<br>
-			$errorcode = 3;<br>
-		}<br>
-	}<br>
 	
 Visit http://yoursite.com/admin to finish the installation.
 
