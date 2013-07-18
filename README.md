@@ -2,7 +2,7 @@ moodle-local_blockusers
 =======================
 A plugin that allows the site administrator to block multiple users for a certain period by uploading a csv file containing the usernames of the users to be blocked.
 
-Download zip from: https://github.com/innovg/moodle-local_blockusers/tree/master/blockusers
+Download zip from: https://github.com/coderep/moodle-local_blockusers/tree/master/blockusers
 
 Unzip into the 'local' subfolder of your Moodle install.
 
