@@ -12,7 +12,7 @@ Moodle 1.9 or higher
 
 Installation:
 ------------
-Download zip from: https://github.com/innovg/moodle-local_blockusers/tree/master/blockusers
+Download zip from: https://github.com/coderep/moodle-local_blockusers/tree/master/blockusers
 Unzip into the 'local' subfolder of your Moodle install.
 Rename the new folder to blockusers.
 Add the following lines in moodle/login/index.php starting from line 117:
